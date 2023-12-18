@@ -15,7 +15,18 @@ public class LinkedListTest extends TestObject {
         java.util.LinkedList<Integer> expected = new java.util.LinkedList<Integer>();
         LinkedList<Integer> actual = new LinkedList<>();
         fillRandomInteger(expected, actual,len, -1000, 100);
-        compare(expected, actual);
+
+        java.util.Iterator<Integer> exit = expected.iterator();
+        java.util.Iterator<Integer> acit = actual.iterator();
+        assertEquals(expected.size(), actual.getSize());
+
+        while (true){
+            assertEquals(exit.hasNext(), acit.hasNext());
+            if(!exit.hasNext()){
+                break;
+            }
+            assertEquals(exit.next(), acit.next());
+        }
     }
 
     @Test
@@ -25,6 +36,18 @@ public class LinkedListTest extends TestObject {
         LinkedList<String> actual = new LinkedList<>();
         fillRandomString(expected, actual,len,-1000, 100);
         compare(expected, actual);
+
+        java.util.Iterator<String> exit = expected.iterator();
+        java.util.Iterator<String> acit = actual.iterator();
+        assertEquals(expected.size(), actual.getSize());
+
+        while (true){
+            assertEquals(exit.hasNext(), acit.hasNext());
+            if(!exit.hasNext()){
+                break;
+            }
+            assertEquals(exit.next(), acit.next());
+        }
     }
 
     @Test

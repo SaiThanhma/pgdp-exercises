@@ -1,6 +1,7 @@
 package helper;
 
 import list.LinkedList;
+import list.ListElement;
 import org.junit.BeforeClass;
 import java.util.List;
 
@@ -63,17 +64,14 @@ public class TestObject {
     }
 
 
-    protected  <T> void compare(java.util.LinkedList<T> expected, LinkedList<T> actual){
+    protected <T> void compare(java.util.LinkedList<T> expected, LinkedList<T> actual){
         assertEquals(actual.getSize(), expected.size());
+        assertEquals(expected.size() > 0, actual.getHead() != null);
 
-        java.util.Iterator<T> exit = expected.iterator();
-        java.util.Iterator<T> acit = actual.iterator();
-        while (true){
-            assertEquals(exit.hasNext(), acit.hasNext());
-            if(!exit.hasNext()){
-                break;
-            }
-            assertEquals(exit.next(), acit.next());
+        ListElement<T> actualCurrent = actual.getHead();
+        for(int i = 0; i < expected.size(); ++i){
+            assertEquals(expected.get(i), actualCurrent.getValue());
+            actualCurrent = actualCurrent.getNext();
         }
     }
 }

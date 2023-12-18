@@ -2,12 +2,12 @@ import helper.TestObject;
 import helper.utility;
 import list.concrete.StringList;
 import org.junit.Test;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 import static helper.utility.reverseLinkedListWithCharArr;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class StringListTest extends TestObject {
 
@@ -17,15 +17,17 @@ public class StringListTest extends TestObject {
         String s;
         for(int i = 0; i < 10; ++i){
             s = rand.getRandomPalindrom(len);
-            StringList list = new StringList();
-            fillWithCharArrayRandom(new LinkedList<>(), list,s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrome());
+            StringList actual = new StringList();
+            fillWithCharArrayRandom(new LinkedList<>(), actual,s);
+            assertEquals(utility.isPalindrom(s), actual.isPalindrome());
+            assertEquals(len, actual.length());
         }
         for(int i = 0; i < 10; ++i){
             s = rand.getRandomString(len);
-            StringList list = new StringList();
-            fillWithCharArrayRandom(new LinkedList<>(), list,s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrome());
+            StringList actual = new StringList();
+            fillWithCharArrayRandom(new LinkedList<>(), actual,s);
+            assertEquals(utility.isPalindrom(s), actual.isPalindrome());
+            assertEquals(len, actual.length());
         }
     }
 
@@ -35,15 +37,17 @@ public class StringListTest extends TestObject {
         String s;
         for(int i = 0; i < 100; ++i){
             s = rand.getRandomPalindrom(len);
-            StringList list = new StringList();
-            fillWithCharArrayRandom(new LinkedList<>(), list,s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrome());
+            StringList actual = new StringList();
+            fillWithCharArrayRandom(new LinkedList<>(), actual,s);
+            assertEquals(utility.isPalindrom(s), actual.isPalindrome());
+            assertEquals(len, actual.length());
         }
         for(int i = 0; i < 100; ++i){
             s = rand.getRandomString(len);
-            StringList list = new StringList();
-            fillWithCharArrayRandom(new LinkedList<>(), list, s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrome());
+            StringList actual = new StringList();
+            fillWithCharArrayRandom(new LinkedList<>(), actual, s);
+            assertEquals(utility.isPalindrom(s), actual.isPalindrome());
+            assertEquals(len, actual.length());
         }
     }
 
@@ -56,6 +60,7 @@ public class StringListTest extends TestObject {
         var exp = reverseLinkedListWithCharArr(expected);
 
         actual.reverse();
+        assertEquals(len, actual.length());
 
         var acit = actual.iterator();
         var exit = exp.iterator();
@@ -67,7 +72,7 @@ public class StringListTest extends TestObject {
             }
             var e1 = exit.next();
             var e2 = acit.next();
-            utility.comapareCharArray(e1, e2);
+            assertTrue(utility.comapareCharArray(e1, e2));
         }
     }
 
@@ -78,7 +83,9 @@ public class StringListTest extends TestObject {
         LinkedList<char[]> expected = new LinkedList<>();
         fillWithCharArrayRandom(expected, actual,rand.getRandomString(len));
         var exp = reverseLinkedListWithCharArr(expected);
+
         actual.reverse();
+        assertEquals(len, actual.length());
 
         var acit = actual.iterator();
         var exit = exp.iterator();
@@ -90,7 +97,7 @@ public class StringListTest extends TestObject {
             }
             var e1 = exit.next();
             var e2 = acit.next();
-            utility.comapareCharArray(e1, e2);
+            assertTrue(utility.comapareCharArray(e1, e2));
         }
     }
 
@@ -100,6 +107,7 @@ public class StringListTest extends TestObject {
         StringList actual = new StringList();
         LinkedList<char[]> expected = new LinkedList<>();
         fillWithCharArrayRandom(expected, actual, rand.getRandomString(len));
+        assertEquals(len, actual.length());
         String s = actual.toString();
         List<char[]> part = utility.partitionString(s, 1, s.length()/3);
         for(int j = 0; j < part.size(); ++j){
@@ -113,6 +121,7 @@ public class StringListTest extends TestObject {
         StringList actual = new StringList();
         LinkedList<char[]> expected = new LinkedList<>();
         fillWithCharArrayRandom(expected, actual, rand.getRandomString(len));
+        assertEquals(len, actual.length());
         String s = actual.toString();
         List<char[]> part = utility.partitionString(s, 1, s.length()/3);
         for(int j = 0; j < part.size(); ++j){
@@ -126,6 +135,7 @@ public class StringListTest extends TestObject {
         StringList actual = new StringList();
         LinkedList<char[]> expected = new LinkedList<>();
         fillWithCharArrayRandom(expected, actual, rand.getRandomString(len));
+        assertEquals(len, actual.length());
         String s = actual.toString();
         List<char[]> part = utility.partitionString(s, 1, s.length()/3);
         for(int j = 0; j < part.size(); ++j){
