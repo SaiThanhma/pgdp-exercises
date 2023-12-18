@@ -19,13 +19,13 @@ public class StringListTest extends TestObject {
             s = rand.getRandomPalindrom(len);
             StringList list = new StringList();
             fillWithCharArrayRandom(new LinkedList<>(), list,s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrom());
+            assertEquals(utility.isPalindrom(s), list.isPalindrome());
         }
         for(int i = 0; i < 10; ++i){
             s = rand.getRandomString(len);
             StringList list = new StringList();
             fillWithCharArrayRandom(new LinkedList<>(), list,s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrom());
+            assertEquals(utility.isPalindrom(s), list.isPalindrome());
         }
     }
 
@@ -37,13 +37,13 @@ public class StringListTest extends TestObject {
             s = rand.getRandomPalindrom(len);
             StringList list = new StringList();
             fillWithCharArrayRandom(new LinkedList<>(), list,s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrom());
+            assertEquals(utility.isPalindrom(s), list.isPalindrome());
         }
         for(int i = 0; i < 100; ++i){
             s = rand.getRandomString(len);
             StringList list = new StringList();
             fillWithCharArrayRandom(new LinkedList<>(), list, s);
-            assertEquals(utility.isPalindrom(s), list.isPalindrom());
+            assertEquals(utility.isPalindrom(s), list.isPalindrome());
         }
     }
 
