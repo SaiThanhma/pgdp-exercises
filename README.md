@@ -40,7 +40,7 @@ Für diese Aufgabe definieren wir die Tribonacci-Folge wie folgt:
 $$
 a_n :=
 \begin{cases} 
-    1, & \text{falls } n \in \{0, 1, 2\} \\
+    1, & \text{falls } n \in \\{0, 1, 2\\\} \\
     a_{n-1} + a_{n-2} + a_{n-3}, & \text{falls } n \geq 3 
 \end{cases}
 $$
