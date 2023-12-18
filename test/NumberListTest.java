@@ -1,9 +1,10 @@
+import helper.TestObject;
 import list.concrete.NumberList;
 import org.junit.Test;
 import java.util.stream.Collectors;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-public class NumberListTest extends TestObject{
+public class NumberListTest extends TestObject {
 
     @Test
     public void invariantTest(){

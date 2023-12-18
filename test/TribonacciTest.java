@@ -1,7 +1,9 @@
+import helper.TestObject;
+import helper.utility;
 import list.concrete.TribonacciList;
 import org.junit.Test;
 
-public class TribonacciTest extends TestObject{
+public class TribonacciTest extends TestObject {
 
     @Test
     public void TribonacciListTestN1(){

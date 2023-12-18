@@ -1,3 +1,5 @@
+package helper;
+
 public class TestDataType implements Comparable<TestDataType>{
     private int value;
 
@@ -15,7 +17,7 @@ public class TestDataType implements Comparable<TestDataType>{
 
     @Override
     public String toString() {
-        return "TestDataType{" +
+        return "helper.TestDataType{" +
                 "value=" + value +
                 '}';
     }
