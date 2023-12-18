@@ -17,17 +17,17 @@ public class StringList extends LinkedList<char[]> {
 
     @Override
     public String toString(){
-        return toStringRecusive(head, new StringBuilder());
+        return toStringRecursive(head, new StringBuilder());
     }
 
-    private String toStringRecusive(ListElement<char[]> current, StringBuilder result){
+    private String toStringRecursive(ListElement<char[]> current, StringBuilder result){
         if(current == null){
             return result.toString();
         }
-        return toStringRecusive(current.getNext(), result.append(current.getValue()));
+        return toStringRecursive(current.getNext(), result.append(current.getValue()));
     }
 
-    public boolean isPalindrom(){
+    public boolean isPalindrome(){
         //TODO
         return false;
     }
