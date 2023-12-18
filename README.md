@@ -113,6 +113,7 @@ Dabei gilt folgendes für alle `value` der Listenelemente:  $0 ≤= value ≤= 9
 - Tipp: Schaue dir noch einmal an, wie schriftliches Addieren funktioniert. Nach einem ähnlichen Prinzip kannst du die Methode auch so implementieren.
 
 ## Testing
+Die Tests wurden mit JUnit geschrieben und überprüfen nur das input/output der jeweilligen Methoden. Außerdem decken die Tests nicht jeden Fall ab und es wurde nicht explizit auf edge cases überprüft.
 
 1. Zur Test-Klassse navigieren
    - Im test Ordner sind viele Klassen vorhanden, die jeweils die entsprechende Klasse im src Ordner testen.
@@ -124,9 +125,9 @@ Dabei gilt folgendes für alle `value` der Listenelemente:  $0 ≤= value ≤= 9
 
 3. Ausführen
    - Nun kannst du die ganze Klasse oder spezifische Testmethoden ausführen.
-   - (in Intellij) findest den entsprechenden Run-Button auf der linken Seite.
+   - (in Intellij) findest du den entsprechenden Run-Button auf der linken Seite.
 
-### Useful Links:
+## Useful Links:
 
 Recusion:
 
