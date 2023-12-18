@@ -1,9 +1,15 @@
 package helper;
 
 import list.LinkedList;
+import list.concrete.NumberList;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+
+import static org.junit.Assert.assertEquals;
 
 public class utility {
     public static class RandomWrapper{
@@ -123,4 +129,24 @@ public class utility {
         }
         return res;
     }
+
+    public static java.util.LinkedList<char[]> reverseLinkedListWithCharArr(java.util.LinkedList<char[]> list){
+        Collections.reverse(list);
+        return new java.util.LinkedList<char[]>(list.stream().map(e->{
+            for(int j = 0; j < e.length/2; ++j){
+                var tmp = e[j];
+                e[j] = e[e.length - 1 - j];
+                e[e.length - 1 - j] = tmp;
+            }
+            return e;
+        }).toList());
+    }
+
+    public static String expectedAddString(Integer first, Integer second){
+        return "[" + (new StringBuilder((String.valueOf(first.intValue() + second.intValue()))).reverse()).toString().chars()
+                .mapToObj(c -> (char) c)
+                .map(Object::toString)
+                .collect(Collectors.joining(", ")) + "]";
+    }
+
 }

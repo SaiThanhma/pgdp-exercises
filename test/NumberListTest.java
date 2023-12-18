@@ -2,8 +2,11 @@ import helper.TestObject;
 import list.concrete.NumberList;
 import org.junit.Test;
 import java.util.stream.Collectors;
+
+import static helper.utility.expectedAddString;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
 public class NumberListTest extends TestObject {
 
     @Test
@@ -74,13 +77,11 @@ public class NumberListTest extends TestObject {
             NumberList first = new NumberList(i1);
             NumberList second = new NumberList(i2);
 
-            String eString = "[" + (new StringBuilder((String.valueOf(i1.intValue() + i2.intValue()))).reverse()).toString().chars()
-                    .mapToObj(c -> (char) c)
-                    .map(Object::toString)
-                    .collect(Collectors.joining(", ")) + "]";
+            String eString = expectedAddString(i1, i2);
             assertEquals(eString, NumberList.add(first, second).toString());
         }
     }
+
     @Test
     public void add5DigitTest(){
         for(int i = 0; i < 100; ++i) {
@@ -89,10 +90,7 @@ public class NumberListTest extends TestObject {
             NumberList first = new NumberList(i1);
             NumberList second = new NumberList(i2);
 
-            String eString = "[" + (new StringBuilder((String.valueOf(i1.intValue() + i2.intValue()))).reverse()).toString().chars()
-                    .mapToObj(c -> (char) c)
-                    .map(Object::toString)
-                    .collect(Collectors.joining(", ")) + "]";
+            String eString = expectedAddString(i1, i2);
             assertEquals(eString, NumberList.add(first, second).toString());
         }
     }
@@ -104,13 +102,8 @@ public class NumberListTest extends TestObject {
             Integer i2 = Integer.valueOf(rand.getRandomInteger(0, 9999999));
             NumberList first = new NumberList(i1);
             NumberList second = new NumberList(i2);
-            String eString = "[" + (new StringBuilder((String.valueOf(i1.intValue() + i2.intValue()))).reverse()).toString().chars()
-                    .mapToObj(c -> (char) c)
-                    .map(Object::toString)
-                    .collect(Collectors.joining(", ")) + "]";
+            String eString = expectedAddString(i1, i2);
             assertEquals(eString, NumberList.add(first, second).toString());
         }
     }
-
-
 }
