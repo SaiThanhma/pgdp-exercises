@@ -6,11 +6,11 @@ import list.ListElement;
 public class TribonacciList extends LinkedList<Integer> {
 
     public TribonacciList(int length) {
-        addNext(length);
+        insert(length);
     }
 
-    public void addNext(int n){
+    @Override
+    public void insert(Integer n) {
         //TODO
     }
-
 }

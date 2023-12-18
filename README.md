@@ -49,9 +49,9 @@ Die Liste soll nun die Folge repräsentieren. Beispielsweise könnte die Liste s
 
 [1] → [1] → [1] → [3] → [5] → [9]
 
-### addNext
+### insert
 
-`void addNext(int n)` soll die nächsten n Folgenglieder an die Liste anhängen. Würden wir für die Liste oben`addNext(3)` aufrufen, bekämen [1] → [1] → [1] → [3] → [5] → [9] → [17] → [31] → [57] als neue Liste.
+`void insert(Integer n)` soll von der Oberklasse überschrieben werden und die nächsten n Folgenglieder an die Liste anhängen. Würden wir für die Liste oben`insert(3)` aufrufen, bekämen [1] → [1] → [1] → [3] → [5] → [9] → [17] → [31] → [57] als neue Liste.
 
 ## StringList
 
@@ -110,7 +110,8 @@ Dabei gilt folgendes für alle `value` der Listenelemente:  $0 ≤= value ≤= 9
 ### add
 
 - Die Methode`NumberList add(NumberList first, NumberList second)` nimmt als Eingabe zwei Listen und gibt eine neue Liste zurück, welche die Addition von first und second darstellen soll.
-- Tipp: Schaue dir noch einmal an, wie schriftliches Addieren funktioniert. Nach einem ähnlichen Prinzip kannst du die Methode auch so implementieren.
+  Beispiel: [5] -> [7] -> [1] + [2] -> [9] $\implies$  [7] -> [6] -> [2]
+- Tipp: Schaue dir noch einmal an, wie schriftliches Addieren funktioniert. Nach einem ähnlichen Prinzip kannst du die Methode implementieren.
 
 # Testing
 Die Tests wurden mit JUnit geschrieben und überprüfen nur das input/output Verhalten der jeweilligen Methoden. Außerdem decken die Tests nicht jeden Fall ab und es wurde nicht explizit auf edge cases überprüft.
@@ -136,6 +137,10 @@ Recusion:
 Linkedlist:
 
 - https://www.youtube.com/watch?v=K1iu1kXkVoA&
+
+Vererbung:
+
+- https://www.youtube.com/watch?v=cp0J3jeBM6Y
 
 Generics:
 
