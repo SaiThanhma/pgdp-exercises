@@ -112,7 +112,7 @@ Dabei gilt folgendes für alle `value` der Listenelemente:  $0 ≤= value ≤= 9
 - Die Methode`NumberList add(NumberList first, NumberList second)` nimmt als Eingabe zwei Listen und gibt eine neue Liste zurück, welche die Addition von first und second darstellen soll.
 - Tipp: Schaue dir noch einmal an, wie schriftliches Addieren funktioniert. Nach einem ähnlichen Prinzip kannst du die Methode auch so implementieren.
 
-## Testing
+# Testing
 Die Tests wurden mit JUnit geschrieben und überprüfen nur das input/output der jeweilligen Methoden. Außerdem decken die Tests nicht jeden Fall ab und es wurde nicht explizit auf edge cases überprüft.
 
 1. Zur Test-Klassse navigieren
