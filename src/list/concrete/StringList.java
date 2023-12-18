@@ -17,13 +17,14 @@ public class StringList extends LinkedList<char[]> {
 
     @Override
     public String toString(){
-        String res = "";
-        list.ListElement<char[]> current = head;
-        while(current != null){
-            res += new String(current.getValue());
-            current = current.getNext();
+        return toStringRecusive(head, new StringBuilder());
+    }
+
+    private String toStringRecusive(ListElement<char[]> current, StringBuilder result){
+        if(current == null){
+            return result.toString();
         }
-        return res;
+        return toStringRecusive(current.getNext(), result.append(current.getValue()));
     }
 
     public boolean isPalindrom(){
