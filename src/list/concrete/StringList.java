@@ -15,6 +15,17 @@ public class StringList extends LinkedList<char[]> {
         this.insert(data);
     }
 
+    public int length(){
+        return lengthRecursive(head, 0);
+    }
+
+    private int lengthRecursive(ListElement<char[]> current, int result){
+        if(current == null){
+            return result;
+        }
+        return lengthRecursive(current.getNext(), result + current.getValue().length);
+    }
+
     @Override
     public String toString(){
         return toStringRecursive(head, new StringBuilder());
