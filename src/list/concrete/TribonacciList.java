@@ -6,10 +6,10 @@ import list.ListElement;
 public class TribonacciList extends LinkedList<Integer> {
 
     public TribonacciList(int length) {
-        addNextRecusive(length);
+        addNext(length);
     }
 
-    public void addNextRecusive(int n){
+    public void addNext(int n){
         //TODO
     }
 
