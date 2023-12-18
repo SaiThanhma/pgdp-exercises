@@ -4,7 +4,7 @@ Dieses Repository enthält ergänzende Übungen für das Modul PGdP. Die Materia
 Falls ihr einen Fehler findet, könnt ihr das unter Issue melden.
 
 # Aufgabenstellung
-- Die Aufgaben behandeln folgende Themen: Rekusion, (einfach) Verkettet Listen, Vererbung, Polymorpie, Generics, Interface (`Iterator<T>`, `Comparable<T>`).
+- Die Aufgaben behandeln folgende Themen: Rekursion, (einfach) Verkettet Listen, Vererbung, Polymorphie, Generics, Interface (`Iterator<T>`, `Comparable<T>`).
 - Prinzipiell sind alle Aufgaben mit Rekusion lösbar. Deswegen solltest du zur Übung so gut wie möglich auf Schleifen verzichten. Du kannst so viele Hilfsfunktionen definieren wie du willst.
   
 ## LinkedList
@@ -20,7 +20,7 @@ Falls ihr einen Fehler findet, könnt ihr das unter Issue melden.
 ### contains:
 
 - `boolean contains(T value)`soll zurückgeben, ob der Parameter `value` in der Liste vorhanden ist.
-- Hinweis: Da wir mit Generics arbeiten sollst du hier die Methode `boolean equals()` vewenden. `==` würde nur überprüfen, ob die Speicheradressen übereinstimmen.
+- Hinweis: Da wir mit Generics arbeiten sollst du hier die Methode `boolean equals()` verwenden. `==` würde nur überprüfen, ob die Speicheradressen übereinstimmen.
 
 ## SortedList
 
@@ -55,9 +55,9 @@ Die Liste soll nun die Folge repräsentieren. Beispielsweise könnte die Liste s
 
 ## StringList
 
-Java speichert seine Strings im sog. **String Intern Pool** im Heap ab, sodass jeder String während der Laufzeit in diesem Pool auch nur einmal existiert. Manchmal will man dieses Verhalten nicht haben. Dazu gibt es Klassen wie StringBuilder und Stringbuffer. 
+Java speichert seine Strings im sogenannten **String Intern Pool** im Heap ab, sodass jeder String während der Laufzeit in diesem Pool auch nur einmal existiert. Manchmal will man dieses Verhalten nicht haben. Dazu gibt es Klassen wie StringBuilder und StringBuffer. 
 
-Alternativ dazu kann man das auch mit verketteten Listen machen wie im Tutorium. Unsere Liste besitzt als `value` ein `char[]`.  Das Aneinanderreihen (Konkatenieren) aller`char[]`repräsentiert dann unseren String.
+Alternativ kann dies auch mit verketteten Listen realisiert werden, ähnlich wie im Tutorium gezeigt. Unsere Liste besitzt als `value` ein `char[]`.  Das Aneinanderreihen (Konkatenieren) aller`char[]`repräsentiert dann unseren String.
 
 Beispiel:
 
@@ -152,4 +152,4 @@ Iterator:
 
 String Pool (nicht wichtig):
 
-- https://live.rbg.tum.de/w/EIDI/4000 1:39
+- https://live.rbg.tum.de/w/EIDI/4000 Time: 1:39
