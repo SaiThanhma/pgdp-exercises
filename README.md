@@ -69,9 +69,7 @@ Beispiel:
 
 Unser String wäre demnach “tschüssikowski”.
 
-Du darfst die vorgegebene Methode `String toString()` in dieser Aufgabe benutzen (auch wenn es bisschen sinnlos dann ist unseren String als Liste zu implementieren).
-
-Es ist auch möglich das ohne die toString Methode zu verwenden, jedoch schwerer.
+Du kannst die vorgegebene Methode `String toString()` in dieser Aufgabe benutzen. Es ist auch möglich das ohne die toString Methode zu verwenden, jedoch schwerer.
 
 ### isPalindrom
 
