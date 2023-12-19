@@ -140,7 +140,7 @@ Recusion:
 
 Linkedlist:
 
-- https://www.youtube.com/watch?v=K1iu1kXkVoA&
+- https://www.youtube.com/watch?v=WwfhLC16bis&
 
 Vererbung:
 
