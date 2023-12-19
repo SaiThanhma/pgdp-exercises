@@ -104,7 +104,7 @@ Dabei gilt folgendes für alle `value` der Listenelemente:  $0 ≤= value ≤= 9
     
     [1] → [2] → [3] → [4] → [5] → [6] → [7] → [8] → [9]
     
-    Unsere List soll wie gesagt keine Zahl repräsentieren die führende Nullen hat.
+    Unsere List soll wie gesagt keine Zahl repräsentieren die führende Nullen hat. Außerdem sollen negative Zahlen nicht eingefügt werden.
     
 
 ### crossSum
@@ -130,7 +130,7 @@ Die Tests wurden mit JUnit geschrieben und überprüfen nur das input/output Ver
 
 3. Ausführen
    - Nun kannst du die ganze Klasse oder spezifische Testmethoden ausführen.
-   - (in Intellij) findest du den entsprechenden Run-Button auf der linken Seite.
+   - (in IntelliJ) findest du den entsprechenden Run-Button auf der linken Seite.
 
 ## Useful Links:
 
