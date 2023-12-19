@@ -11,12 +11,21 @@ public class NumberListTest extends TestObject {
 
     @Test
     public void invariantTest(){
-        NumberList list = new NumberList();
-        fillRandomInteger(new java.util.LinkedList<>(), list, 100, -100, 100);
-        for(Integer i : list){
+        NumberList actual = new NumberList();
+        fillRandomInteger(new java.util.LinkedList<>(), actual, 100, -100, 100);
+        for(Integer i : actual){
             assertTrue(i.intValue() >= 0 && i.intValue() <= 9);
         }
-        assertTrue(list.getTail().getValue().intValue() != 0);
+        assertTrue(actual.getTail().getValue().intValue() != 0);
+    }
+
+    @Test
+    public void insertNegativeTest(){
+        for(int i = 0; i < 5; ++i){
+            NumberList actual = new NumberList();
+            fillRandomInteger(new java.util.LinkedList<>(), actual, 1, -1000, -1);
+            assertTrue(actual.getSize() == 0);
+        }
     }
 
     @Test
