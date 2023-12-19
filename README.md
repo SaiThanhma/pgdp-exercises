@@ -4,7 +4,7 @@ Dieses Repository enthält ergänzende Übungen für das Modul PGdP. Die Materia
 Falls ihr einen Fehler findet, könnt ihr das unter Issue melden.
 
 # Setup in (in IntelliJ)
-- Das Repository kann durch den Befehl `git clone https://github.com/SaiThanhma/pgdp-exercises` bzw. in IntelliJ unter 'Get from version control' mit dem gleichen Link heruntergeladen werden.
+- Das Repository kann durch den Befehl `git clone https://github.com/SaiThanhma/pgdp-exercises` bzw. in IntelliJ unter `Get from version control` mit dem gleichen Link heruntergeladen werden.
 - Der `src` und `test` Ordner soll nun in der IDE als `Sources Root` bzw. `Test Sources Root` makiert werden. Diese Optionen findet ihr, indem ihr mit der rechten Maustaste auf den jeweiligen Ordner klickt und dann unter `Mark Directory as` auswählt.
 
 # Aufgabenstellung
