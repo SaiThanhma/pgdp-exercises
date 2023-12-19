@@ -3,6 +3,10 @@ Dieses Repository enthält ergänzende Übungen für das Modul PGdP. Die Materia
 
 Falls ihr einen Fehler findet, könnt ihr das unter Issue melden.
 
+# Setup in (in IntelliJ)
+- Das Repository kann durch den Befehl `git clone https://github.com/SaiThanhma/pgdp-exercises` bzw. in IntelliJ unter 'Get from version control' mit dem gleichen Link heruntergeladen werden.
+- Der `src` und `test` Ordner soll nun in der IDE als `Sources Root` bzw. `Test Sources Root` makiert werden. Diese Optionen findet ihr, indem ihr mit der rechten Maustaste auf den jeweiligen Ordner klickt und dann unter `Mark Directory as` auswählt.
+
 # Aufgabenstellung
 - Die Aufgaben behandeln folgende Themen: Rekursion, (einfach) Verkettet Listen, Vererbung, Polymorphie, Generics, Interface (`Iterator<T>`, `Comparable<T>`).
 - Prinzipiell sind alle Aufgaben mit Rekusion lösbar. Deswegen solltest du zur Übung so gut wie möglich auf Schleifen verzichten. Du kannst so viele Hilfsfunktionen definieren wie du willst.
@@ -120,7 +124,7 @@ Die Tests wurden mit JUnit geschrieben und überprüfen nur das input/output Ver
    - Im test Ordner sind viele Klassen vorhanden, die jeweils die entsprechende Klasse im src Ordner testen.
    - Finde die Testklasse, die du ausführen möchtest.
 
-2. Add Junit to classpath (in Intellij)
+2. Add Junit to classpath (in IntelliJ)
    - Nun kann es sein, dass `import org.junit.Test` rot makiert ist.
    - Du kannst mit der Maus über das rot makierte Statement gehen und dir werden dann Optionen angezeigt. Klicke nun auf "Add 'JUnt4 to classpath' und dann auf 'OK'.
 
