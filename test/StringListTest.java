@@ -113,6 +113,12 @@ public class StringListTest extends TestObject {
         for(int j = 0; j < part.size(); ++j){
             assertEquals(s.contains(new String(part.get(j))), actual.contains(part.get(j)));
         }
+
+        String r = rand.getRandomString(len);
+        part = utility.partitionString(r, 1, s.length()/3);
+        for(int j = 0; j < part.size(); ++j){
+            assertEquals(s.contains(new String(part.get(j))), actual.contains(part.get(j)));
+        }
     }
 
     @Test
@@ -127,6 +133,12 @@ public class StringListTest extends TestObject {
         for(int j = 0; j < part.size(); ++j){
             assertEquals(s.contains(new String(part.get(j))), actual.contains(part.get(j)));
         }
+
+        String r = rand.getRandomString(len);
+        part = utility.partitionString(r, 1, s.length()/3);
+        for(int j = 0; j < part.size(); ++j){
+            assertEquals(s.contains(new String(part.get(j))), actual.contains(part.get(j)));
+        }
     }
 
     @Test
@@ -138,6 +150,12 @@ public class StringListTest extends TestObject {
         assertEquals(len, actual.length());
         String s = actual.toString();
         List<char[]> part = utility.partitionString(s, 1, s.length()/3);
+        for(int j = 0; j < part.size(); ++j){
+            assertEquals(s.contains(new String(part.get(j))), actual.contains(part.get(j)));
+        }
+
+        String r = rand.getRandomString(len);
+        part = utility.partitionString(r, 1, s.length()/3);
         for(int j = 0; j < part.size(); ++j){
             assertEquals(s.contains(new String(part.get(j))), actual.contains(part.get(j)));
         }
